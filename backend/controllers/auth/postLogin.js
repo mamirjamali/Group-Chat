@@ -24,7 +24,7 @@ const postLogin = async (req, res) => {
             )
 
             return res.status(200).json({
-                userDetail:
+                userDetails:
                  {
                     username: user.username,
                     email: user.email,
