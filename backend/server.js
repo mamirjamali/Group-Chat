@@ -17,7 +17,7 @@ app.use('/api/auth', authRoutes)
 
 const server = http.createServer(app);
 
-
+mongoose.set('strictQuery', false);
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
@@ -29,3 +29,4 @@ mongoose
         console.log("Database connection faild")
         console.log(err)
     })
+    
