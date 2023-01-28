@@ -16,7 +16,7 @@ const validatePassword = (password) => {
   return password.length >= 6
 }
 
-const validEmail = (email) => {
+export const validEmail = (email) => {
   const pattern = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/
   return pattern.test(email)
 }

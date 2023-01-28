@@ -3,7 +3,6 @@ import { Button } from '@mui/material'
 
 
 export default function CustomPrimaryButton({ lable, handleClick, isValid, additionalStyles }) {
-  console.log(isValid)
   return (
       <Button
           sx={{
