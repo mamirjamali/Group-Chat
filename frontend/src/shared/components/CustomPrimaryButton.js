@@ -2,7 +2,8 @@ import React from 'react'
 import { Button } from '@mui/material'
 
 
-export default function CustomPrimaryButton({lable, handleClick, isValid, additionalStyles}) {
+export default function CustomPrimaryButton({ lable, handleClick, isValid, additionalStyles }) {
+  console.log(isValid)
   return (
       <Button
           sx={{
@@ -15,7 +16,7 @@ export default function CustomPrimaryButton({lable, handleClick, isValid, additi
           }}
           disabled={!isValid}
           onClick={handleClick}
-          style= {additionalStyles ? additionalStyles : {}}
+          style= {additionalStyles ? additionalStyles : {}}          
       >
         {lable}
     </Button>

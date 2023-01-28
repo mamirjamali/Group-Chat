@@ -6,7 +6,7 @@ const verifyToken = (req, res, next) => {
     let token = req.body.token || req.query.token || req.headers['authorization']
 
     if (!token) {
-        return res.status(403).send("Please login/register a token is required")
+        return res.status(403).send("Please login/register, a token is required")
     }
 
     try {
