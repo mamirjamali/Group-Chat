@@ -7,7 +7,7 @@ const registerSocketServer = (server) => {
     });
     io.on('connection', (socket) => {
         console.log("User Connected")
-        console.log(socket.io)
+        console.log(socket.id)
     })
 }
 

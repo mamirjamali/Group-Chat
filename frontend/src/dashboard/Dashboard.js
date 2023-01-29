@@ -7,6 +7,7 @@ import AppBar from "./AppBar/AppBar";
 import logout from '../shared/utils/auth';
 import { connect } from 'react-redux'
 import { getActions } from '../store/actions/authAction';
+import { connectWirhSockrtServer } from '../realTimeCommunication/socketConnection';
 
 
 const Wrapper = styled("div")({
@@ -24,6 +25,7 @@ const Dashboard = ({setUserDetails}) => {
     if (!userDetails) logout();
    
     setUserDetails(JSON.parse(userDetails));
+    connectWirhSockrtServer(JSON.parse(userDetails));
    
   }, []);
 
