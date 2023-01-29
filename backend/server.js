@@ -19,6 +19,7 @@ app.use('/api/auth', authRoutes)
 const server = http.createServer(app);
 socketSerer.registerSocketServer(server)
 
+mongoose.set('strictQuery', false);
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
